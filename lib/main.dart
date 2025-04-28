@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:note_app1/application/app.dart';
 import 'package:note_app1/data_show_screen.dart';
 import 'firebase_options.dart';
 
@@ -8,24 +9,10 @@ import 'firebase_options.dart';
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp( const MyApp());
+  runApp( const NoteApp1());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Note_App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home:   HomePage(),
-    );
-  }
-}
+
 
 class HomePage extends StatelessWidget {
    HomePage({super.key});
