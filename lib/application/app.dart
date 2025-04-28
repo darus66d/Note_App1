@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note_app1/main.dart';
+import 'package:note_app1/screens/home_screen.dart';
 
 class NoteApp1 extends StatelessWidget {
   const NoteApp1({super.key});
@@ -12,7 +13,7 @@ class NoteApp1 extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:   HomePage(),
+      home:   HomeScreen(),
     );
   }
 }
